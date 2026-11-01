@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces Orientales - El legado que despierta con el sol</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cinzel Decorative, Cinzel, and Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* Custom styles to integrate the color palette and fonts */
+        :root {
+            --color-primary: #fccb86;
+            --color-secondary: #641d25;
+            --color-text: #333333;
+            --color-background: #fffefb;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; /* Secondary font */
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+
+        /* Primary fonts for titles */
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+        }
+        h2, h3, .font-title {
+            font-family: 'Cinzel', serif;
+        }
+
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .border-primary { border-color: var(--color-primary); }
+
+        .bg-secondary { background-color: var(--color-secondary); }
+        .text-secondary { color: var(--color-secondary); }
+        .border-secondary { border-color: var(--color-secondary); }
+
+        .bg-background { background-color: var(--color-background); }
+
+        /* Smooth transition for active link indicator */
+        .sidebar-indicator {
+            transition: top 0.3s ease-in-out;
+        }
+
+        /* Gallery Modal Styling */
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="flex">
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="fixed top-0 left-0 h-screen bg-secondary text-white w-64 p-6 shadow-2xl transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40">
+        <div class="text-center mb-10">
+            <a href="#inicio">
+                 <span class="font-title text-2xl font-bold text-primary block mb-2">Raíces Orientales</span>
+                 <img src="assets/RAÍCES ORIENTALES.png" alt="Logo Raíces Orientales" class="mx-auto">
+            </a>
+        </div>
+        <nav class="relative">
+            <span id="sidebar-indicator" class="sidebar-indicator absolute left-0 h-10 w-1 bg-primary rounded-r-full"></span>
+            <ul class="space-y-4" id="nav-links">
+                <li><a href="#nosotros" class="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-index="0"><i data-feather="book" class="mr-3"></i>Inicio</a></li>
+                <li><a href="#trailer" class="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-index="1"><i data-feather="video" class="mr-3"></i>Trailer</a></li>
+                <li><a href="#documental" class="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-index="2"><i data-feather="film" class="mr-3"></i>Documental</a></li>
+                <li><a href="#juego" class="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-index="3"><i data-feather="play-circle" class="mr-3"></i>Juego en Línea</a></li>
+                <li><a href="#cuento" class="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-index="4"><i data-feather="book-open" class="mr-3"></i>El Cuento</a></li>
+                <li><a href="#galeria" class="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-index="5"><i data-feather="image" class="mr-3"></i>Galería</a></li>
+                <li><a href="#calendario" class="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-index="6"><i data-feather="calendar" class="mr-3"></i>Calendario</a></li>
+            </ul>
+        </nav>
+        <div class="absolute bottom-6 left-6 right-6 text-center text-xs text-white/50">
+            <p>&copy; 2025 Raíces Orientales</p>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden fixed top-4 left-4 z-50 bg-secondary p-2 rounded-md text-white">
+        <i data-feather="menu"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="md:ml-64 w-full transition-all duration-300">
+
+        <!-- Banner Principal -->
+        <header id="inicio" class="h-screen bg-cover bg-center flex items-center justify-center text-white relative" style="background-image: linear-gradient(rgba(100, 29, 37, 0.8), rgba(100, 29, 37, 0.9)), url('https://images.unsplash.com/photo-1526481280643-33c94628b6fa?q=80&w=2070&auto=format&fit=crop');">
+            <div class="text-center p-4">
+                <h1 class="font-black text-6xl md:text-8xl text-primary drop-shadow-lg">Raíces Orientales</h1>
+                <p class="mt-4 text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">"El legado que despierta con el sol”</p>
+                <a href="#nosotros" class="mt-8 inline-block bg-primary text-secondary font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-300 transition-colors duration-300 shadow-lg">Conoce la Historia</a>
+            </div>
+            <div class="absolute bottom-8 text-white animate-bounce">
+                <i data-feather="arrow-down" class="w-8 h-8"></i>
+            </div>
+        </header>
+
+        <!-- Sections Wrapper -->
+        <div class="bg-background">
+            
+            <!-- Section: Inicio -->
+            <section id="nosotros" class="min-h-screen p-8 md:p-16 lg:p-24">
+                <h2 class="text-4xl font-bold text-secondary mb-12 text-center">Inicio</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                         <div class="flex justify-center items-center">
+                            <img src="assets/RAÍCES ORIENTALES (1).jpg" alt="Logo de proyecto" class="rounded-lg w-full object-cover shadow-xl border-4 border-primary">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="text-2xl font-bold text-secondary mb-4">Raíces Orientales</h3>
+                            <p class="mb-4 leading-relaxed text-justify">"Raíces Orientales" narra la llegada de la comunidad china a Piura y cómo, con el paso del tiempo, estas familias crearon espacios para compartir y mantener viva su cultura. A través de sus actividades, transmiten tradiciones, costumbres y valores, preservando una identidad que enriquece al norte del Perú.</p>
+                            <p class="leading-relaxed text-justify">Este proyecto es un homenaje a esa resiliencia y un puente para que las nuevas generaciones conozcan y valoren la profunda huella de la cultura china en nuestra tierra.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Trailer -->
+            <section id="trailer" class="min-h-screen p-8 md:p-16 lg:p-24">
+                <h2 class="text-4xl font-bold text-secondary mb-12 text-center">Trailer</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="rounded-lg overflow-hidden shadow-2xl mb-8 border-4 border-primary">
+                       <iframe class="w-full" style="aspect-ratio: 16 / 9;" src="https://drive.google.com/file/d/16PeT0s0NCYIXijD0T8n8rL-XX4RmGfSm/preview" allow="autoplay"></iframe>
+                    </div>
+                   <p class="text-lg leading-relaxed text-justify mt-8">En este adelanto, conocerás a Dilcia Isabel Li Say Tan Sánchez, una mujer extraordinaria que lleva en su sonrisa la calidez piurana y en su corazón el orgullo de sus raíces chinas. Escucharás por primera vez su voz, verás el brillo en sus ojos cuando habla de su padre cantonés y sentirás la emoción que la embarga al recordar las tradiciones familiares que aún conserva</p>
+               </div>
+            </section>
+            
+            <!-- Section: Documental -->
+            <section id="documental" class="min-h-screen p-8 md:p-16 lg:p-24">
+                 <h2 class="text-4xl font-bold text-secondary mb-12 text-center">Documental</h2>
+                 <div class="max-w-4xl mx-auto">
+                    <div class="rounded-lg overflow-hidden shadow-2xl mb-8 border-4 border-primary">
+                       <iframe class="w-full" style="aspect-ratio: 16 / 9;" src="https://drive.google.com/file/d/13SheTXhjy4-GQlKO7Xulxu2VQtI9wNo9/preview" allow="autoplay"></iframe>
+                    </div>
+                    <p class="text-lg leading-relaxed text-justify">Este documental da voz a nuestra protagonista Dilcia Isabel Li Say Tan Sánchez de la comunidad chino-peruana. A través de sus testimonios, exploramos la historia, los desafíos y el orgullo de ser guardianes de un legado ancestral en tierra peruana, mostrando cómo sus tradiciones enriquecen la identidad de Piura.</p>
+                </div>
+            </section>
+
+            <!-- Section: Juego -->
+            <section id="juego" class="min-h-screen p-8 md:p-16 lg:p-24 flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(255, 254, 251, 0.8), rgba(255, 254, 251, 0.95)), url('https://images.unsplash.com/photo-1629196614742-ac831cb92337?q=80&w=2070&auto=format&fit=crop');">
+                <div>
+                    <h2 class="text-4xl font-bold text-secondary mb-6">Juego: "Navegando hacia un nuevo hogar"</h2>
+                    <div class="flex justify-center mb-8">
+                        <img src="assets/juego-preview.png" alt="Vista previa del juego Navegando hacia un nuevo hogar" class="rounded-lg w-full max-w-lg object-cover shadow-xl border-4 border-primary">
+                    </div>
+                    <p class="text-lg max-w-2xl mx-auto mb-8 leading-relaxed text-justify">El juego recrea el viaje de migrantes chinos al Perú siglo XIX. Tiene tres niveles: remolino, tormenta y rocas. El jugador guía una embarcación, supera desafíos y descubre un fragmento de su legado hasta arribar a la costa norte peruana. ¡Acepta el reto!</p>
+                    <a href="https://migrantes-chinos.web.app/" target="_blank" rel="noopener noreferrer">
+                        <button class="bg-secondary text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-red-900 transition-colors duration-300 shadow-lg">Jugar</button>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section: Cuento -->
+            <section id="cuento" class="min-h-screen p-8 md:p-16 lg:p-24">
+                <h2 class="text-4xl font-bold text-secondary mb-12 text-center">Cuento</h2>
+                <div class="max-w-5xl mx-auto grid md:grid-cols-5 gap-8 items-center">
+                    <div class="md:col-span-2 flex justify-center">
+                        <img src="assets/portada_comic.png" alt="Portada del cuento Luz del león" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-3xl font-bold text-secondary mb-4">Luz del león</h3>
+                        <p class="text-lg mb-6 leading-relaxed text-justify">Nuestro cuento narra la danza del león: su origen en China, sus piruetas bajo la luz de la luna, y su llegada a Piura. Consta de un solo capítulo dinámico y visual que celebra el legado cultural y la transmisión de tradiciones.</p>
+                        <a href="https://www.webtoons.com/es/canvas/luz-de-le%C3%B3n/list?title_no=1067883" target="_blank" rel="noopener noreferrer">
+                            <button class="bg-secondary text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-red-900 transition-colors duration-300 shadow-lg">Leer cuento</button>
+                        </a>
+                        
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Galería -->
+            <section id="galeria" class="min-h-screen p-8 md:p-16 lg:p-24">
+                <h2 class="text-4xl font-bold text-secondary mb-12 text-center">Galería</h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-justify">Explora una cuidada selección de fotografías históricas que documentan el legado Chino. ¡Echale un vistazo!</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Image 1 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2263.jpg" data-title="Imagen 1" data-description="Don Antonio Chon Shing recibiendo al embajador de China en el Perú junto a una comitiva en el aeropuerto de Piura. Piura, 1960.">
+                        <img src="assets/galeria/IMG_2263.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 1">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 1</h3>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2264.jpg" data-title="Imagen 2" data-description="Comitiva de la Beneficencia China acompañados de autoridades piuranas en el club Grau de Piura. Piura, 1960.">
+                        <img src="assets/galeria/IMG_2264.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 2">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 2</h3>
+                        </div>
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2265.jpg" data-title="Imagen 3" data-description="Antonio Chong Shing con su hijo Hilario (izquierda), sus hermanos Apa y Francisco, los empleados de la mueblería Chong Shing. Sullana, hacia 1975.">
+                        <img src="assets/galeria/IMG_2265.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 3">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 3</h3>
+                        </div>
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2266.jpg" data-title="Imagen 4" data-description="Don Augusto Lau(57) acompañado de su esposa, doña Georgina y sus hijos Ricardo(14), Cristina (17) y Manuel Augusto (18). Piura, 1957.">
+                        <img src="assets/galeria/IMG_2266.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 4">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 4</h3>
+                        </div>
+                    </div>
+                    <!-- Image 5 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2267.jpg" data-title="Imagen 5" data-description="Don Ma San Lin con su sobrina en el aeropuerto de Talara a punto de viajar a Lima, 1994. Fotografía atribuida a Ma San Lin.">
+                        <img src="assets/galeria/IMG_2267.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 5">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 5</h3>
+                        </div>
+                    </div>
+                    <!-- Image 6 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2268.jpg" data-title="Imagen 6" data-description="Don Ma San Li con Severiano Luy y Elías Man en las Playas de Talara. Talara 1939.">
+                        <img src="assets/galeria/IMG_2268.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 6">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 6</h3>
+                        </div>
+                    </div>
+                    <!-- Image 7 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2270.jpg" data-title="Imagen 7" data-description="Don Ma San Li e Isaac Chong con otros prósperos paisanos gracias a su dedicación laboral en torno la Internacional Petroleun Company Talara, hacia 1935.">
+                        <img src="assets/galeria/IMG_2270.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 7">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 7</h3>
+                        </div>
+                    </div>
+                    <!-- Image 8 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2272.jpg" data-title="Imagen 8" data-description="Senki Ruiz y Amigos en duna, h. 1930.">
+                        <img src="assets/galeria/IMG_2272.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 8">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 8</h3>
+                        </div>
+                    </div>
+                    <!-- Image 9 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2274.jpg" data-title="Imagen 9" data-description="Familia y amigos de los Ruiz en la zona de campo de Pariñas. Talara, 1936.">
+                        <img src="assets/galeria/IMG_2274.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 9">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 9</h3>
+                        </div>
+                    </div>
+                    <!-- Image 10 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2275.jpg" data-title="Imagen 10" data-description="Grupo de Chinos en la estación del ferrocarril “Puerto Bolívar-Loja”. Loja 1935.">
+                        <img src="assets/galeria/IMG_2275.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 10">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 10</h3>
+                        </div>
+                    </div>
+                    <!-- Image 11 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2276.jpg" data-title="Imagen 11" data-description="Grupo de chinos alojados en casa de la familia Ruiz. Arriba: Juan Chang y Arturo Ruiz.">
+                        <img src="assets/galeria/IMG_2276.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 11">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 11</h3>
+                        </div>
+                    </div>
+                    <!-- Image 12 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2277.jpg" data-title="Imagen 12" data-description="Familia de don Wong en la celebración del Día de la madre en la Beneficencia China. Aparecen sus hijo: Félix Wong Yong, Blanca y Rosa Wong Kan y sus respectivos esposos. En el centro, don Antonio aparece con doña Elena Kufoy. Piura, 1963.">
+                        <img src="assets/galeria/IMG_2277.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 12">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 12</h3>
+                        </div>
+                    </div>
+                    <!-- Image 13 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2278.jpg" data-title="Imagen 13" data-description="Nietos de don Wong en el jardín de su casa una tarde de domingo. Les acompaña doña Elena Kufoy. Piura 1965.">
+                        <img src="assets/galeria/IMG_2278.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 13">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 13</h3>
+                        </div>
+                    </div>
+                    <!-- Image 14 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2279.jpg" data-title="Imagen 14" data-description="Blanca Wong entrando a la iglesia María Auxiliadora con su padre don Antonio Wong, el día de su boda con Ernesto Kufoy. Piura 1958.">
+                        <img src="assets/galeria/IMG_2279.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 14">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 14</h3>
+                        </div>
+                    </div>
+                    <!-- Image 15 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2280.jpg" data-title="Imagen 15" data-description="El cumpleaños 80 de don San lin. Aparece junto a su esposa María Garrido Enriquez, sus hijos y nietos. Sullana, 1980.">
+                        <img src="assets/galeria/IMG_2280.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 15">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 15</h3>
+                        </div>
+                    </div>
+                    <!-- Image 16 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2281.jpg" data-title="Imagen 16" data-description="Antonio Chong Shing Junto a su familia en China. En el centro aparece su madre, quien quizá esté de cumpleaños debido a que detrás se encuentra el símbolo de la longevidad, típico en estas celebraciones. China, hacia 1970.">
+                        <img src="assets/galeria/IMG_2281.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 16">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 16</h3>
+                        </div>
+                    </div>
+                    <!-- Image 17 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2282.jpg" data-title="Imagen 17" data-description="Brindis en la Beneficencia China de Piura por el cumpleaños de Bernardo Siu. Piura, 1963.">
+                        <img src="assets/galeria/IMG_2282.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 17">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 17</h3>
+                        </div>
+                    </div>
+                    <!-- Image 18 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2283.jpg" data-title="Imagen 18" data-description="Bernardo Siu acompañado de familiares y amigos el día de su cumpleaños en el local de la beneficencia China. Piura, 1963.">
+                        <img src="assets/galeria/IMG_2283.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 18">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 18</h3>
+                        </div>
+                    </div>
+                    <!-- Image 19 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2284.jpg" data-title="Imagen 19" data-description="Tienda de Don Julio Ly Yap en Chulucanas. Rodolfo Ly, Ernesto Koo, Julio Ly, Rosa Silva Palacios y Elio Li (niño). Chulucanas, hacia 1960.">
+                        <img src="assets/galeria/IMG_2284.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 19">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 19</h3>
+                        </div>
+                    </div>
+                    <!-- Image 20 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2285.jpg" data-title="Imagen 20" data-description="Ma San Lin e Issac Chong junto a un grupo de chinos en el aeropuerto de Talara. Talara, 1940.">
+                        <img src="assets/galeria/IMG_2285.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 20">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 20</h3>
+                        </div>
+                    </div>
+                    <!-- Image 21 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2286.jpg" data-title="Imagen 21" data-description="Francisco Chau junto a sus amigos celebrando  posiblemente alguna festividad china importante en el local de la Beneficencia China de Sullana. Sullana, hacia 1970.">
+                        <img src="assets/galeria/IMG_2286.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 21">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 21</h3>
+                        </div>
+                    </div>
+                    <!-- Image 22 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-src="assets/galeria/IMG_2287.jpg" data-title="Imagen 22" data-description="Linda Ayón y Luis Gualberto Wong Chang, recién casados, rumbo a la recepción en el Hotel Miramar, Paita 1959.">
+                        <img src="assets/galeria/IMG_2287.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Galería 22">
+                        <div class="absolute inset-0 bg-black/50 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-bold font-['Cinzel']">Imagen 22</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Calendario Chino -->
+            <section id="calendario" class="min-h-screen p-8 md:p-16 lg:p-24">
+                <h2 class="text-4xl font-bold text-secondary mb-12 text-center">Calendario Tradicional Chino</h2>
+                <div class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-2xl border border-gray-200">
+                     <img src="assets/Años_Chino.jpg" alt="Calendario Chino" class="w-full h-auto rounded-lg">
+                </div>
+            </section>
+
+        </div>
+        
+        <!-- Footer -->
+        <footer class="bg-secondary text-white p-12">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h4 class="font-title text-xl font-bold text-primary mb-4">Raíces Orientales</h4>
+                    <p class="text-white/70 text-justify">Preservando el legado de la cultura china en el norte del Perú.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-['Cinzel']">Contacto y Créditos</h4>
+                    <p class="text-white/70">info@raicesorientales.org</p>
+                    <p class="text-white/70">Un proyecto de estudiantes de la Universidad Privada Antenor Orrego</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-['Cinzel']">Síguenos</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61576932340435" class="text-white/70 hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer"><i data-feather="facebook" class="w-6 h-6"></i></a>
+                        <a href="https://www.instagram.com/raices_orientales?igsh=bTRvODhkaDU0bm4z&utm_source=qr" class="text-white/70 hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer"><i data-feather="instagram" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none">
+        <div class="bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-full overflow-y-auto relative transform scale-95 transition-transform duration-300">
+            <button id="modal-close-button" class="absolute top-2 right-2 bg-white/50 hover:bg-white p-2 rounded-full z-10"><i data-feather="x" class="text-gray-800"></i></button>
+            <img id="modal-img" src="" alt="Imagen de la galería" class="w-full h-auto object-contain max-h-[70vh]">
+            <div class="p-6">
+                <h3 id="modal-title" class="text-2xl font-bold text-secondary mb-2"></h3>
+                <p id="modal-description" class="text-gray-700 leading-relaxed text-justify"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Feather Icons Activation ---
+            feather.replace();
+
+            // --- Mobile Menu Logic ---
+            const sidebar = document.getElementById('sidebar');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            mobileMenuButton.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+            
+            // --- Sidebar Active Link Indicator ---
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('#nav-links a');
+            const indicator = document.getElementById('sidebar-indicator');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Section needs to be 50% visible
+            };
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const link = document.querySelector(`a[href="#${entry.target.id}"]`);
+                        if (link) {
+                            navLinks.forEach(l => l.classList.remove('text-primary', 'font-bold'));
+                            link.classList.add('text-primary', 'font-bold');
+
+                            // Robust calculation for vertical centering
+                            const linkContainer = link.parentElement; // The <li> element
+                            const indicatorHeight = indicator.offsetHeight;
+                            const linkContainerHeight = linkContainer.offsetHeight;
+                            
+                            // Calculates the top position to center the indicator with the link container
+                            const topPosition = linkContainer.offsetTop + (linkContainerHeight / 2) - (indicatorHeight / 2);
+                            
+                            indicator.style.top = `${topPosition}px`;
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+            // --- Gallery Modal Logic (Improved) ---
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            const modalContent = modal.querySelector('div.bg-white');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const closeModalButton = document.getElementById('modal-close-button');
+
+            function openModal(imgSrc, title, description) {
+                modalImg.src = imgSrc;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-95');
+            }
+
+            function closeModal() {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.add('scale-95');
+            }
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const src = item.dataset.src;
+                    const title = item.dataset.title;
+                    const description = item.dataset.description;
+                    openModal(src, title, description);
+                });
+            });
+
+            closeModalButton.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+        }); // End of DOMContentLoaded
+    </script>
+</body>
+</html>
